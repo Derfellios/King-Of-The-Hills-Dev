@@ -1,4 +1,3 @@
 This mod adds one new rule: If you hold all hills at the end of a turn, you win. The number and size of hills can be altered.
-The hills can found by clicking 'Game' on the bottom left and then 'Mod: King Of The Hill'. 
-If the game includes manual picking, the hills are indicated with a cities symbol from commerce during the picking phase.
+The hills are indicated with Money Caches and can found by clicking 'Game' on the bottom left and then 'Mod: King Of The Hill'. 
 In team games, the game ends when a team holds all hills.

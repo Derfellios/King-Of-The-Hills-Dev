@@ -18,10 +18,12 @@ function AddHillsToGame(game, standing)
 		local j = math.random(i, #PossTerr)
 		PossTerr[i], PossTerr[j] = PossTerr[j], PossTerr[i]
 		table.insert(PublicGameData.Hills, PossTerr[i])
-		standing.Territories[PossTerr[i] ].NumArmies = WL.Armies.Create(SizeOfHills, {})
-		if not game.Settings.AutomaticTerritoryDistribution then -- Add cities to territories
-			standing.Territories[PossTerr[i]].Structures = {WL.StructureType.City}
-		end
+		standing.Territories[PossTerr[i]].NumArmies = WL.Armies.Create(SizeOfHills, {})
+		
+		local s = standing.Territories[PossTerr[i]].Structures;
+        if (s == nil) then s = {}; end;
+        s[WL.StructureType.Mine] = 1;
+		standing.Territories[PossTerr[i]].Structures = s;
 	end
 
 	Mod.PublicGameData = PublicGameData;
